@@ -1,6 +1,5 @@
 """
 Helper script to set up Cloudinary credentials.
-You can run this once to check if your Cloudinary configuration is working.
 """
 import os
 import cloudinary
@@ -40,7 +39,6 @@ def test_cloudinary_config():
         
         # Create the pothole_detection folder if it doesn't exist
         try:
-            # This will fail if folder already exists, but that's fine
             cloudinary.api.create_folder("pothole_detection")
             print("Created 'pothole_detection' folder")
         except Exception:
